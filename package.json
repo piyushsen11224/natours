@@ -9,7 +9,7 @@
     "start:prod": "NODE_ENV=production nodemon server.js",
     "debug": "ndb server.js",
     "watch:js": "parcel watch --no-hmr starter/public/js/index.js --out-dir starter/public/js --out-file bundle.js",
-    "build:js": "parcel watch --no-hmr starter/public/js/index.js --out-dir starter/public/js --out-file bundle.js"
+    "build:js": "parcel build starter/public/js/index.js --out-dir starter/public/js --out-file bundle.js"
   },
   "author": "",
   "license": "ISC",
