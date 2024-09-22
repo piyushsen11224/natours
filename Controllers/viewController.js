@@ -37,7 +37,7 @@ exports.getLoginForm = (req, res) => {
     .status(200)
     .set(
       "Content-Security-Policy",
-      "connect-src 'self' https://cdnjs.cloudflare.com http://127.0.0.1:3000/api/v1/users/login"
+      "connect-src 'self' https://cdnjs.cloudflare.com https://natours-1-onsc.onrender.com/api/v1/users/login"
     )
     .render("login", {
       title: "User Login",
