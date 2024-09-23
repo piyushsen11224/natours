@@ -35,16 +35,19 @@ const createSendToken = (user, statusCode, res) => {
 };
 
 exports.signup = catchAsync(async (req, res, next) => {
-  const newUser = await User.create(
-    req.body
-    // name: req.body.name,
-    // email: req.body.email,
-    // photo: req.body.photo,
-    // password: req.body.password,
-    // passwordConfirm: req.body.passwordConfirm,
-    // role: req.body.role,
-  );
-  createSendToken(newUser, 201, res);
+  const newUser = await User.create({
+    name: req.body.name,
+    email: req.body.email,
+    password: req.body.password,
+    passwordConfirm: req.body.passwordConfirm,
+  });
+
+  res.status(201).json({
+    status: "success",
+    data: {
+      user: newUser,
+    },
+  });
 });
 
 exports.login = catchAsync(async (req, res, next) => {
