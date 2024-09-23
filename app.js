@@ -32,12 +32,6 @@ app.use(
   helmet.contentSecurityPolicy({
     directives: {
       defaultSrc: ["'self'", "https:", "http:", "data:", "ws:"],
-      connectSrc: [
-        "'self'",
-        "http://127.0.0.1:3000",
-        "https://cdnjs.cloudflare.com",
-        "https://natours-1-onsc.onrender.com",
-      ],
       baseUri: ["'self'"],
       fontSrc: ["'self'", "https:", "http:", "data:"],
       scriptSrc: ["'self'", "https:", "http:", "blob:"],
